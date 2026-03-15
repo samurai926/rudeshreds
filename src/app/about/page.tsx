@@ -1,73 +1,156 @@
 import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "About — RudeShreds",
+  title: "About — RUDESHREDS",
   description:
     "Northeast snowboarder based in NYC. Riding Stratton VT, Poconos, and NJ.",
 };
 
+interface GearItem {
+  category: string;
+  name: string;
+  image?: string;
+}
+
+// Update with actual gear
+const gear: GearItem[] = [
+  { category: "BOARD", name: "TBD" },
+  { category: "BINDINGS", name: "TBD" },
+  { category: "BOOTS", name: "TBD" },
+  { category: "HELMET", name: "TBD" },
+  { category: "GOGGLES", name: "TBD" },
+  { category: "JACKET", name: "TBD" },
+  { category: "PANTS", name: "TBD" },
+  { category: "GLOVES", name: "TBD" },
+];
+
 export default function About() {
   return (
-    <div className="pt-24 pb-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
-        {/* Header */}
-        <h1 className="font-[family-name:var(--font-heading)] text-6xl sm:text-8xl tracking-wider">
-          ABOUT <span className="text-[#b4ff00]">RUDE</span>
+    <div className="pt-24 sm:pt-32 pb-20">
+      {/* ═══════════════════ HEADER ═══════════════════ */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <h1 className="font-[family-name:var(--font-heading)] text-[5rem] sm:text-[8rem] md:text-[12rem] font-bold tracking-tight leading-[0.85]">
+          ABOUT
+          <span className="text-[#b4ff00]"> RUDE</span>
         </h1>
+      </div>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-12">
-          {/* Photo placeholder */}
-          <div className="md:col-span-1">
-            <div className="aspect-[3/4] bg-[#141414] border border-[#2a2a2a] flex items-center justify-center">
-              <p className="text-[#555] text-xs tracking-widest uppercase text-center px-4">
-                Photo here
-              </p>
+      {/* ═══════════════════ BIO SECTION ═══════════════════ */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 mt-12 sm:mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
+          {/* Photo — tall, overlapping feel */}
+          <ScrollReveal className="md:col-span-4">
+            <div className="aspect-[3/4] bg-[#0a0a0a] border border-[#222] flex items-center justify-center relative overflow-hidden">
+              {/* Diagonal accent on photo placeholder */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-[#b4ff00]" />
+              <span className="font-[family-name:var(--font-body)] text-[10px] tracking-[0.3em] text-[#333]">
+                PHOTO
+              </span>
             </div>
-          </div>
+          </ScrollReveal>
 
-          {/* Bio */}
-          <div className="md:col-span-2 space-y-6">
-            <p className="text-lg leading-relaxed text-[#ccc]">
-              Northeast snowboarder out of <strong className="text-[#b4ff00]">Manhattan, NYC</strong>.
-              Started riding at age 4 and never looked back. Now shredding every
-              weekend across the Northeast — from home mountain{" "}
-              <strong className="text-[#ededed]">Stratton, VT</strong> to the
-              Poconos and NJ resorts.
-            </p>
+          {/* Bio text */}
+          <ScrollReveal className="md:col-span-8" delay={0.1}>
+            <div className="space-y-6">
+              <p className="font-[family-name:var(--font-body)] text-sm sm:text-base leading-[1.8] text-[#999]">
+                Northeast snowboarder out of{" "}
+                <strong className="text-[#b4ff00] font-normal">
+                  Manhattan, NYC
+                </strong>
+                . Started riding at 4 and never looked back. Now shredding every
+                weekend across the Northeast — from home mountain{" "}
+                <strong className="text-[#e0e0e0] font-normal">
+                  Stratton, VT
+                </strong>{" "}
+                to the Poconos and NJ.
+              </p>
 
-            <p className="text-lg leading-relaxed text-[#ccc]">
-              All-around rider who loves park features — jumps, rails, boxes — as
-              much as carving groomers, running glades, and lining up for
-              boardercross. Always progressing, always pushing.
-            </p>
+              <p className="font-[family-name:var(--font-body)] text-sm sm:text-base leading-[1.8] text-[#999]">
+                All-around rider. Park features — jumps, rails, boxes. Carving
+                groomers. Running glades. Boardercross. Whatever the mountain
+                throws, Rude rides it.
+              </p>
 
-            <p className="text-lg leading-relaxed text-[#ccc]">
-              A city kid who shreds. Manhattan during the week, mountains on the
-              weekend. That&apos;s the life.
-            </p>
+              <p className="font-[family-name:var(--font-body)] text-sm sm:text-base leading-[1.8] text-[#999]">
+                City kid who shreds. Manhattan during the week, mountains on the
+                weekend. That&apos;s the life.
+              </p>
 
-            {/* Quick facts */}
-            <div className="pt-6 border-t border-[#2a2a2a]">
-              <h2 className="font-[family-name:var(--font-heading)] text-2xl tracking-wider text-[#888] mb-4">
-                QUICK FACTS
+              {/* Quick facts — asymmetric layout */}
+              <div className="pt-8 mt-8 border-t border-[#222]">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+                  {[
+                    ["HOME MTN", "Stratton, VT"],
+                    ["BASED", "Manhattan, NYC"],
+                    ["ALSO RIDES", "Poconos, Big Snow, Mtn Creek"],
+                    ["STYLE", "All Mountain / Park"],
+                    [
+                      "RIDERS I WATCH",
+                      "Zeb Powell, McMorris, Danny Kass, Canter",
+                    ],
+                  ].map(([label, value]) => (
+                    <div key={label}>
+                      <dt className="font-[family-name:var(--font-body)] text-[9px] tracking-[0.3em] text-[#444]">
+                        {label}
+                      </dt>
+                      <dd className="mt-1 font-[family-name:var(--font-body)] text-xs text-[#ccc]">
+                        {value}
+                      </dd>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </div>
+
+      {/* ═══════════════════ GEAR SECTION ═══════════════════ */}
+      <div className="mt-24 sm:mt-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[#0a0a0a] -skew-y-1 origin-top-left scale-105" />
+
+        <div className="relative z-10 py-20 sm:py-28">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <ScrollReveal>
+              <h2 className="font-[family-name:var(--font-heading)] text-5xl sm:text-7xl md:text-8xl font-bold tracking-tight leading-none mb-12">
+                CURRENT
+                <span className="text-[#b4ff00]"> SETUP</span>
               </h2>
-              <dl className="grid grid-cols-2 gap-4 text-sm">
-                {[
-                  ["Home Mountain", "Stratton, VT"],
-                  ["Based In", "Manhattan, NYC"],
-                  ["Also Rides", "Poconos, Big Snow NJ, Mountain Creek"],
-                  ["Style", "All Mountain / Park"],
-                  ["Favorite Riders", "Zeb Powell, Mark McMorris, Danny Kass, Jake Canter"],
-                  ["Setup", "Coming soon"],
-                ].map(([label, value]) => (
-                  <div key={label}>
-                    <dt className="text-[#555] tracking-wider uppercase">
-                      {label}
-                    </dt>
-                    <dd className="mt-1 text-[#ededed]">{value}</dd>
+            </ScrollReveal>
+
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+              {gear.map((item, i) => (
+                <ScrollReveal key={item.category} delay={i * 0.05}>
+                  <div className="glow-hover border border-[#222] group">
+                    {/* Image area */}
+                    <div className="aspect-square bg-[#0e0e0e] flex items-center justify-center overflow-hidden relative">
+                      {item.image ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={item.image}
+                          alt={item.name}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                      ) : (
+                        <span className="font-[family-name:var(--font-heading)] text-4xl sm:text-5xl font-bold text-[#111] group-hover:text-[#b4ff00]/10 transition-colors duration-500 select-none">
+                          {item.category.charAt(0)}
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Label */}
+                    <div className="p-3 border-t border-[#222]">
+                      <p className="font-[family-name:var(--font-body)] text-[9px] tracking-[0.3em] text-[#b4ff00]">
+                        {item.category}
+                      </p>
+                      <p className="font-[family-name:var(--font-heading)] text-lg font-bold tracking-wider text-[#e0e0e0] mt-0.5">
+                        {item.name}
+                      </p>
+                    </div>
                   </div>
-                ))}
-              </dl>
+                </ScrollReveal>
+              ))}
             </div>
           </div>
         </div>

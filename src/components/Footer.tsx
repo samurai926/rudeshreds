@@ -49,32 +49,40 @@ const socials = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-[#2a2a2a] bg-[#0a0a0a]">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-          <p className="font-[family-name:var(--font-heading)] text-2xl tracking-wider text-[#b4ff00]">
-            RUDESHREDS
-          </p>
+    <footer className="relative border-t border-[#222] bg-[#050505]">
+      {/* Accent stripe */}
+      <div className="h-px bg-gradient-to-r from-transparent via-[#b4ff00] to-transparent" />
 
-          <div className="flex items-center gap-5">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
+          <div>
+            <p className="font-[family-name:var(--font-heading)] text-4xl font-bold tracking-[0.2em] text-[#b4ff00]">
+              RUDESHREDS
+            </p>
+            <p className="text-[10px] tracking-[0.3em] text-[#444] mt-1 font-[family-name:var(--font-body)]">
+              NORTHEAST SNOWBOARDER // NYC
+            </p>
+          </div>
+
+          <div className="flex items-center gap-6">
             {socials.map((s) => (
               <a
                 key={s.label}
                 href={s.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#888] hover:text-[#b4ff00] transition-colors"
+                className="text-[#444] hover:text-[#b4ff00] hover:drop-shadow-[0_0_8px_rgba(180,255,0,0.5)] transition-all duration-300"
                 aria-label={s.label}
               >
-                <s.icon size={22} />
+                <s.icon size={20} />
               </a>
             ))}
           </div>
         </div>
 
-        <div className="mt-8 pt-6 border-t border-[#1a1a1a] flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-[#555]">
-          <p>Northeast Snowboarder. Stratton | NYC.</p>
-          <p>&copy; {new Date().getFullYear()} RudeShreds</p>
+        <div className="mt-10 pt-6 border-t border-[#111] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-[10px] tracking-[0.2em] text-[#333] font-[family-name:var(--font-body)]">
+          <p>STRATTON VT / MANHATTAN NYC / POCONOS / BIG SNOW NJ</p>
+          <p>&copy; {new Date().getFullYear()} RUDESHREDS</p>
         </div>
       </div>
     </footer>
