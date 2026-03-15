@@ -15,13 +15,13 @@ interface GearItem {
 
 // Update with actual gear
 const gear: GearItem[] = [
-  { category: "BOARD", name: "Arbor Vortice 110" },
-  { category: "BOOTS", name: "Burton Grom Boa" },
-  { category: "HELMET", name: "Giro" },
-  { category: "GOGGLES", name: "Dragon" },
+  { category: "BOARD", name: "Arbor Vortice 110", image: "/gear/board.jpg" },
+  { category: "BOOTS", name: "Burton Grom Boa", image: "/gear/boots.png" },
+  { category: "HELMET", name: "Giro", image: "/gear/helmet.webp" },
+  { category: "GOGGLES", name: "Dragon", image: "/gear/goggles.png" },
   { category: "JACKET", name: "Patagonia Powdertown" },
   { category: "PANTS", name: "Patagonia Powdertown" },
-  { category: "MITTENS", name: "Hestra" },
+  { category: "MITTENS", name: "Hestra", image: "/gear/mittens.jpg" },
 ];
 
 export default function About() {
