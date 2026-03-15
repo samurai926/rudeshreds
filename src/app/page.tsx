@@ -43,10 +43,10 @@ export default function Home() {
               WATCH EDITS
             </Link>
             <Link
-              href="/contact"
+              href="/about"
               className="group flex items-center gap-3 border border-[#333] px-8 py-4 font-[family-name:var(--font-body)] text-[10px] tracking-[0.3em] uppercase text-[#666] hover:border-[#b4ff00] hover:text-[#b4ff00] transition-all duration-300"
             >
-              SPONSOR INQUIRY
+              ABOUT RUDE
               <ArrowRight
                 size={14}
                 className="group-hover:translate-x-1 transition-transform"
