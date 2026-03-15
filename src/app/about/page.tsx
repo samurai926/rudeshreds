@@ -15,14 +15,13 @@ interface GearItem {
 
 // Update with actual gear
 const gear: GearItem[] = [
-  { category: "BOARD", name: "TBD" },
-  { category: "BINDINGS", name: "TBD" },
-  { category: "BOOTS", name: "TBD" },
-  { category: "HELMET", name: "TBD" },
-  { category: "GOGGLES", name: "TBD" },
-  { category: "JACKET", name: "TBD" },
-  { category: "PANTS", name: "TBD" },
-  { category: "GLOVES", name: "TBD" },
+  { category: "BOARD", name: "Arbor Vortice 110" },
+  { category: "BOOTS", name: "Burton Grom Boa" },
+  { category: "HELMET", name: "Giro" },
+  { category: "GOGGLES", name: "Dragon" },
+  { category: "JACKET", name: "Patagonia Powdertown" },
+  { category: "PANTS", name: "Patagonia Powdertown" },
+  { category: "MITTENS", name: "Hestra" },
 ];
 
 export default function About() {
@@ -90,6 +89,10 @@ export default function About() {
                     [
                       "RIDERS I WATCH",
                       "Zeb Powell, McMorris, Danny Kass, Canter",
+                    ],
+                    [
+                      "CURRENT BOARD",
+                      "Arbor Vortice 110",
                     ],
                   ].map(([label, value]) => (
                     <div key={label}>
