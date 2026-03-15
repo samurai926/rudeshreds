@@ -111,25 +111,13 @@ export default function Home() {
           <ScrollReveal delay={0.1}>
             {/* 16:9 video container — full width */}
             <div className="relative aspect-video bg-[#0a0a0a] border border-[#222] overflow-hidden scanlines">
-              <div className="absolute inset-0 flex items-center justify-center z-10">
-                <div className="text-center">
-                  <div className="w-16 h-16 border-2 border-[#333] flex items-center justify-center mx-auto mb-4">
-                    <Play size={24} className="text-[#333] fill-current" />
-                  </div>
-                  <p className="font-[family-name:var(--font-body)] text-[10px] tracking-[0.3em] text-[#333]">
-                    YOUTUBE EMBED // REPLACE VIDEO_ID
-                  </p>
-                </div>
-              </div>
-              {/*
               <iframe
-                src="https://www.youtube.com/embed/VIDEO_ID"
-                title="Latest RudeShreds edit"
+                src="https://www.youtube.com/embed/KwR20RiOoSM"
+                title="RudeShreds — First Edit"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="absolute inset-0 w-full h-full z-10"
               />
-              */}
             </div>
           </ScrollReveal>
         </div>
