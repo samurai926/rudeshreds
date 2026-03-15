@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       {/* ═══════════════════ HERO ═══════════════════ */}
-      <section className="relative min-h-screen flex items-end overflow-hidden pb-20 sm:pb-28">
+      <section className="relative min-h-screen flex items-center sm:items-end overflow-hidden pt-24 pb-16 sm:pt-0 sm:pb-28">
         {/* Background layers */}
         <div className="absolute inset-0 bg-[#050505]" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-transparent to-[#050505]" />
