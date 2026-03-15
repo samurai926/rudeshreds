@@ -41,12 +41,14 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
           {/* Photo — tall, overlapping feel */}
           <ScrollReveal className="md:col-span-4">
-            <div className="aspect-[3/4] bg-[#0a0a0a] border border-[#222] flex items-center justify-center relative overflow-hidden">
-              {/* Diagonal accent on photo placeholder */}
-              <div className="absolute top-0 left-0 w-full h-1 bg-[#b4ff00]" />
-              <span className="font-[family-name:var(--font-body)] text-[10px] tracking-[0.3em] text-[#333]">
-                PHOTO
-              </span>
+            <div className="aspect-[3/4] bg-[#0a0a0a] border border-[#222] relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-[#b4ff00] z-10" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/gallery/20260223_103211.jpg"
+                alt="RudeShreds portrait"
+                className="w-full h-full object-cover"
+              />
             </div>
           </ScrollReveal>
 

@@ -29,9 +29,16 @@ const media: MediaItem[] = [
     id: "KwR20RiOoSM",
     title: "RudeShreds — First Edit",
   },
-  // Add more:
-  // { type: "video", id: "VIDEO_ID", title: "Stratton Park Session" },
-  // { type: "photo", src: "/gallery/rail-slide.jpg", alt: "Rail slide at Stratton" },
+  {
+    type: "photo",
+    src: "/gallery/20260125_115151.jpg",
+    alt: "Pow day — board and trees",
+  },
+  {
+    type: "photo",
+    src: "/gallery/20260223_103211.jpg",
+    alt: "Deep snow portrait",
+  },
 ];
 
 export default function Media() {
