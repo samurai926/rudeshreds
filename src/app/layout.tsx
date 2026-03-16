@@ -30,6 +30,9 @@ export const metadata: Metadata = {
     "park riding",
     "boardercross",
   ],
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
